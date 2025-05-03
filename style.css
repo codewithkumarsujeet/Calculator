@@ -22,13 +22,21 @@ body {
 
 h1 {
   font-size: 42px;
+  margin-bottom: 10px;
 }
 
 input {
-  margin: 16px 0px;
+  margin: 8px 0px;
   padding: 12px;
   font-size: 16px;
   width: 264px;
+}
+#result{
+  /* border-style: hidden; */
+  width: 150px;
+  margin:5px 0px;
+  padding:5px;
+
 }
 
 .buttons {
@@ -74,7 +82,7 @@ input {
   font-size: 20px;
 }
 
-.result {
+.equal {
   grid-column: 3/5;
   background-color: yellow;
 }

@@ -1,24 +1,27 @@
-let selectedOperator = null;
+const input = document.getElementById("number-input");
+const equalButton = document.querySelector(".equal");
+const result = document.getElementById("result");
+const AC = document.querySelector(".AC");
+const x = document.querySelector(".x");
 
-function setOperator(op) {
-  selectedOperator = op;
-  alert(`Operator selected: ${op}`);
+function handleClicButton(el) {
+  input.value += el.innerText;
 }
 
-function calculate() {
-  const num1 = parseFloat(document.getElementById("firstNumber").value);
-  const num2 = parseFloat(document.getElementById("secondNumber").value);
-  let result;
-
-  if (isNaN(num1) || isNaN(num2)) {
-    result = "Please enter both numbers!";
-  } else if (!selectedOperator) {
-    result = "Please select an operator!";
-  } else {
-    if (selectedOperator === "+") result = num1 + num2;
-    else if (selectedOperator === "-") result = num1 - num2;
-    else if (selectedOperator === "*") result = num1 * num2;
+equalButton.addEventListener("click", () => {
+  try {
+    result.value = eval(input.value); // Use with caution
+    // input.value = "";
+  } catch (error) {
+    alert("Invalid expression");
   }
+});
 
-  document.getElementById("result").innerText = "Result: " + result;
-}
+AC.addEventListener("click", ()=>{
+  result.value = "";
+  input.value = "";
+})
+
+x.addEventListener("click", ()=>{
+ input.value = input.value.slice(0, -1);
+})

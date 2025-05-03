@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Step-by-Step Calculator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="calculator">
     <h1>Calculator</h1>
+
+    <input type="text" id="number-input" placeholder="Enter operation" />
+    <br>
+    <span><input type="text" id="result" placeholder="00"/></span>
     
-    <input type="text" id="firstNumber" placeholder="Enter operation" />
-    
-    <div class="buttons">
-      <div class="btn-key">7</div>
-      <div class="btn-key">8</div>
-      <div class="btn-key">9</div>
-      <div class="btn-key">+</div>
-      <div class="btn-key">4</div>
-      <div class="btn-key">5</div>
-      <div class="btn-key">6</div>
-      <div class="btn-key">-</div>
-      <div class="btn-key">1</div>
-      <div class="btn-key">2</div>
-      <div class="btn-key">0</div>
-      <div class="btn-key">*</div>
-      <div class="btn-key double-zero">00</div>
-      <div class="btn-key">.</div>
-      <div class="btn-key">/</div>
-      <div class="btn-key AC">AC</div>
-      <div class="btn-key x">x</div>
-      <div class="btn-key result">=</div>
-    </div>
+
+      <div class="buttons">
+        <div onclick="handleClicButton(this)" class="btn-key">7</div>
+        <div onclick="handleClicButton(this)" class="btn-key">8</div>
+        <div onclick="handleClicButton(this)" class="btn-key">9</div>
+        <div onclick="handleClicButton(this)" class="btn-key">+</div>
+        <div onclick="handleClicButton(this)" class="btn-key">4</div>
+        <div onclick="handleClicButton(this)" class="btn-key">5</div>
+        <div onclick="handleClicButton(this)" class="btn-key">6</div>
+        <div onclick="handleClicButton(this)" class="btn-key">-</div>
+        <div onclick="handleClicButton(this)" class="btn-key">1</div>
+        <div onclick="handleClicButton(this)" class="btn-key">2</div>
+        <div onclick="handleClicButton(this)" class="btn-key">0</div>
+        <div onclick="handleClicButton(this)" class="btn-key">*</div>
+        <div onclick="handleClicButton(this)" class="btn-key double-zero">00</div>
+        <div onclick="handleClicButton(this)" class="btn-key">.</div>
+        <div onclick="handleClicButton(this)" class="btn-key">/</div>
+        <div class="btn-key AC">AC</div>
+        <div class="btn-key x">x</div>
+        <div class="btn-key equal">=</div>
+      </div>
 
   </div>
 
   <script src="index.js"></script>
 </body>
+
 </html>
